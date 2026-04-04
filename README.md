@@ -2,7 +2,7 @@
 
 一个基于 EdgeOne Pages 构建的随机图片分发系统。
 
-Demo：https://picture.tianhw.top/
+Demo：https://api.goodnightan.com/
 
 ## 🌟 特性
 
