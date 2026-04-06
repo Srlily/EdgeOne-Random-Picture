@@ -69,6 +69,10 @@ export default function HomeClient({ images }) {
           <p className="text-sm md:text-base font-light tracking-[0.5em] text-white/90 mb-16 uppercase drop-shadow-lg shadow-black">
             Random picture
           </p>
+
+          <div className="flex flex-col gap-2 text-[9px] md:text-[10px] tracking-[0.15em] text-white/60 font-light lowercase drop-shadow-md mb-10">
+            <p>目前图片总数：{images.pc.length + images.mobile.length}，其中PC端图片{images.pc.length}张，移动端图片{images.mobile.length}张</p>
+          </div> 
           
           <div className="flex flex-col items-center space-y-10">
             <div className="space-y-6">
@@ -100,6 +104,10 @@ export default function HomeClient({ images }) {
                 所有图片
               </Link>
             </div>
+            
+            <div className="flex flex-col gap-2 text-[9px] md:text-[10px] tracking-[0.15em] text-white/100 font-bold lowercase drop-shadow-md">
+                <p>部分图片包含强烈光影，患有癫痫病及相关疾病的人士请谨慎观看</p>
+            </div>
           </div>
         </div>
       </main>
@@ -107,7 +115,7 @@ export default function HomeClient({ images }) {
       {/* Footer */}
       <footer className="fixed bottom-8 left-0 right-0 z-20 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity duration-500">
         <div className="flex items-center gap-4 text-[10px] font-bold tracking-[0.2em] uppercase text-white">
-          <a href="https://blog.goodnightan.com" target="_blank" className="text-inherit no-underline hover:text-white transition-colors">THW</a>
+          <a href="https://blog.goodnightan.com" target="_blank" className="text-inherit no-underline hover:text-white transition-colors">晚安</a>
         </div>
         <div className="text-[9px] text-white/30 font-medium">
           © {new Date().getFullYear()} Powered by EdgeOne Pages
