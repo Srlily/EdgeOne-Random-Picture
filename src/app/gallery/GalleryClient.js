@@ -248,7 +248,7 @@ export default function GalleryClient({ initialImages }) {
 
       <footer className="p-12 text-center opacity-40 text-sm border-t border-neutral-200 dark:border-white/5">
         <p className="mb-2 text-xs tracking-wider font-bold">部分图片包含强烈光影，患有癫痫病及相关疾病的人士请谨慎观看</p>
-        <p>© {new Date().getFullYear()} <a href="https://blog.goodnightan.com" target="_blank" className="text-inherit no-underline hover:opacity-100 transition-colors">晚安</a>. Powered by EdgeOne Pages</p>
+        <p>© {new Date().getFullYear()} <a href="#" target="_blank" className="text-inherit no-underline hover:opacity-100 transition-colors">Srlily</a>. Powered by EdgeOne Pages</p>
       </footer>
     </div>
   );
