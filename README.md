@@ -2,7 +2,7 @@
 
 一个基于 EdgeOne Pages 构建的随机图片分发系统。
 
-Demo：https://api.goodnightan.com/
+Demo：
 
 ## 🌟 特性
 
@@ -46,11 +46,12 @@ pnpm dev
 
 ## 📡 API 接口
 
-- **随机图片重定向**: `GET /api/random`
+- **首页**: `GET /`
+- **随机图片重定向**: `GET /random`
 - **指定类型**:
-  - PC 端: `/api/random?type=pc`
-  - 移动端: `/api/random?type=mobile`
-- **JSON 格式**: `/api/random?redirect=false` (返回图片 URL 路径)
+  - PC 端: `/random?type=pc`
+  - 移动端: `/random?type=mobile`
+- **JSON 格式**: `/random?redirect=false` (返回图片 URL 路径)
 - **图库预览**: `GET /gallery`
 
 ## 📄 许可证

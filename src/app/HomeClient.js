@@ -25,11 +25,11 @@ export default function HomeClient({ images }) {
         setIsLoaded(true);
       };
       img.onerror = () => {
-        setBgUrl('/api/random');
+        setBgUrl('/random');
         setIsLoaded(true);
       };
     } else {
-      setBgUrl('/api/random');
+      setBgUrl('/random');
       setIsLoaded(true);
     }
 
@@ -78,7 +78,7 @@ export default function HomeClient({ images }) {
             <div className="space-y-6">
               <div className="space-y-2">
                 <code className="block text-[10px] md:text-xs tracking-[0.1em] text-white/80 font-mono shadow-sm lowercase">
-                  {origin ? `${origin}/api/random` : '/api/random'}
+                  {origin ? `${origin}/random` : '/random'}
                 </code>
                 <div className="h-px w-8 bg-white/50 mx-auto" />
               </div>
@@ -91,7 +91,7 @@ export default function HomeClient({ images }) {
 
             <div className="flex flex-col md:flex-row gap-8 items-center text-white">
               <a 
-                href="/api/random" 
+                href="/random"
                 className="text-sm tracking-[0.3em] uppercase hover:text-white/60 transition-colors py-2 border-b border-transparent hover:border-white/20"
               >
                 随机一张

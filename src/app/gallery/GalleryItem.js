@@ -18,7 +18,6 @@ export default function GalleryItem({ img, idx, onClick }) {
       img.addEventListener('load', handleLoad);
       img.addEventListener('error', handleLoad);
       
-      // 使用 decode() 预解码
       if (img.decode) {
         img.decode().then(handleLoad).catch(handleLoad);
       }

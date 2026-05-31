@@ -17,12 +17,10 @@ export default function GalleryClient({ initialImages }) {
   const cardRef = useRef(null);
 
   useEffect(() => {
-    // 进入图库页面启用滚动
     document.body.style.overflow = 'auto';
     document.documentElement.style.overflow = 'auto';
     
     return () => {
-      // 离开时重置（回到首页会再次被 HomeClient 锁定）
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
     };
@@ -30,7 +28,6 @@ export default function GalleryClient({ initialImages }) {
 
   useGSAP(() => {
     if (gridRef.current) {
-      // 仅动画化前 24 个元素，避免长列表动画导致的卡顿
       const itemsToAnimate = Array.from(gridRef.current.children).slice(0, 24);
       
       gsap.fromTo(itemsToAnimate,
@@ -47,7 +44,6 @@ export default function GalleryClient({ initialImages }) {
         }
       );
 
-      // 其余元素直接显示
       if (gridRef.current.children.length > 24) {
         gsap.set(Array.from(gridRef.current.children).slice(24), { opacity: 1 });
       }
@@ -56,12 +52,10 @@ export default function GalleryClient({ initialImages }) {
 
   useGSAP(() => {
     if (selectedImage && lightboxRef.current && cardRef.current) {
-      // Lightbox 背景动画
       gsap.fromTo(lightboxRef.current,
         { opacity: 0 },
         { opacity: 1, duration: 0.3, ease: "power2.out" }
       );
-      // 卡片弹出动画
       gsap.fromTo(cardRef.current,
         { scale: 0.9, opacity: 0, y: 20 },
         { scale: 1, opacity: 1, y: 0, duration: 0.4, delay: 0.1, ease: "back.out(1.7)" }
